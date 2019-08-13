@@ -4,11 +4,11 @@ const canvas = document.getElementsByTagName('canvas')[0];
 resizeCanvas();
 
 let config = {
-    SIM_RESOLUTION: 1024 ,
+    SIM_RESOLUTION: 512 ,
     DYE_RESOLUTION: 2048,
     CAPTURE_RESOLUTION: 512,
-    DENSITY_DISSIPATION: 0.1,
-    VELOCITY_DISSIPATION: 0.1,
+    DENSITY_DISSIPATION: 0.0,
+    VELOCITY_DISSIPATION: 0.0,
     PRESSURE: 0.6,
     PRESSURE_ITERATIONS: 20,
     CURL: 40,
@@ -16,13 +16,13 @@ let config = {
     SPLAT_FORCE: 6000,
     SHADING: false,
     COLORFUL: true,
-    COLOR_UPDATE_SPEED: 100,
+    COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
     BACK_COLOR: { r: 0, g: 0, b: 0 },
     TRANSPARENT: false,
     BLOOM: true,
     BLOOM_ITERATIONS: 8,
-    BLOOM_RESOLUTION: 256,
+    BLOOM_RESOLUTION: 1024,
     BLOOM_INTENSITY: 0.2,
     BLOOM_THRESHOLD: 0.85,
     BLOOM_SOFT_KNEE: 0.8
@@ -664,7 +664,7 @@ let curl;
 let pressure;
 let bloom;
 
-let ditheringTexture = createTextureAsync('LDR_LLL1_0.png');
+let ditheringTexture = createTextureAsync('BLOB_BLOB.png');
 
 const copyProgram                = new GLProgram(baseVertexShader, copyShader);
 const clearProgram               = new GLProgram(baseVertexShader, clearShader);
@@ -1296,10 +1296,6 @@ function scaleByPixelRatio (input) {
 // Repeat everything every x seconds
 var interval = setInterval(function() {
     multipleSplats(parseInt(Math.random() * 20) + 5);
-}, 13000);
-
-var interval = setInterval(function() {
-    multipleSplats(parseInt(Math.random() * 20) + 5);
-}, 7000);
+}, 10000);
 
 // clearInterval(interval);
