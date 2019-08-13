@@ -28,17 +28,17 @@ const canvas = document.getElementsByTagName('canvas')[0];
 resizeCanvas();
 
 let config = {
-    SIM_RESOLUTION: 256,
+    SIM_RESOLUTION: 2048 ,
     DYE_RESOLUTION: 1024,
     CAPTURE_RESOLUTION: 512,
     DENSITY_DISSIPATION: 0,
     VELOCITY_DISSIPATION: 0,
-    PRESSURE: 0.8,
+    PRESSURE: 0.5,
     PRESSURE_ITERATIONS: 20,
     CURL: 30,
-    SPLAT_RADIUS: 0.25,
+    SPLAT_RADIUS: 0.06,
     SPLAT_FORCE: 6000,
-    SHADING: true,
+    SHADING: false,
     COLORFUL: true,
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
@@ -47,8 +47,8 @@ let config = {
     BLOOM: true,
     BLOOM_ITERATIONS: 8,
     BLOOM_RESOLUTION: 256,
-    BLOOM_INTENSITY: 0.8,
-    BLOOM_THRESHOLD: 0.6,
+    BLOOM_INTENSITY: 0.1,
+    BLOOM_THRESHOLD: 0.86,
     BLOOM_SOFT_KNEE: 0.7
 }
 
@@ -1388,7 +1388,7 @@ function scaleByPixelRatio (input) {
 
 // Repeat everything every x seconds
 var interval = setInterval(function() {
-    multipleSplats(parseInt(Math.random() * 20) + 5);
-}, 14000);
+    multipleSplats(parseInt(Math.random() * 10) + 5);
+}, 13000);
 
 // clearInterval(interval);
