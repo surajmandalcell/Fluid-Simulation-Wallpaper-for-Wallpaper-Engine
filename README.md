@@ -2,6 +2,8 @@
 
 - Striped down version of Pavel Dobryakov's OpenGl Fluid Simulation repository made for wallpaper engine use
 
+'''dist''' contains the wallpaper engine package
+
 ### Features
 - Lightweight
 - Beautiful
