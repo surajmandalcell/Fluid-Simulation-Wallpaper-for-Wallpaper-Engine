@@ -4,28 +4,28 @@ const canvas = document.getElementsByTagName('canvas')[0];
 resizeCanvas();
 
 let config = {
-    SIM_RESOLUTION: 512 ,
-    DYE_RESOLUTION: 1024,
+    SIM_RESOLUTION: 1024 ,
+    DYE_RESOLUTION: 2048,
     CAPTURE_RESOLUTION: 512,
-    DENSITY_DISSIPATION: 0,
-    VELOCITY_DISSIPATION: 0,
-    PRESSURE: 0.5,
+    DENSITY_DISSIPATION: 0.1,
+    VELOCITY_DISSIPATION: 0.1,
+    PRESSURE: 0.6,
     PRESSURE_ITERATIONS: 20,
-    CURL: 30,
+    CURL: 40,
     SPLAT_RADIUS: 0.06,
     SPLAT_FORCE: 6000,
     SHADING: false,
     COLORFUL: true,
-    COLOR_UPDATE_SPEED: 10,
+    COLOR_UPDATE_SPEED: 100,
     PAUSED: false,
     BACK_COLOR: { r: 0, g: 0, b: 0 },
     TRANSPARENT: false,
     BLOOM: true,
     BLOOM_ITERATIONS: 8,
     BLOOM_RESOLUTION: 256,
-    BLOOM_INTENSITY: 0.1,
-    BLOOM_THRESHOLD: 0.86,
-    BLOOM_SOFT_KNEE: 0.7
+    BLOOM_INTENSITY: 0.2,
+    BLOOM_THRESHOLD: 0.85,
+    BLOOM_SOFT_KNEE: 0.8
 }
 
 function pointerPrototype () {
@@ -1296,7 +1296,10 @@ function scaleByPixelRatio (input) {
 // Repeat everything every x seconds
 var interval = setInterval(function() {
     multipleSplats(parseInt(Math.random() * 20) + 5);
-    multipleSplats(parseInt(Math.random() * 10) + 5);
 }, 13000);
+
+var interval = setInterval(function() {
+    multipleSplats(parseInt(Math.random() * 20) + 5);
+}, 7000);
 
 // clearInterval(interval);
