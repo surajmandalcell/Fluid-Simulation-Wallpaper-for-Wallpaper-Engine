@@ -1,10 +1,10 @@
 # Fluid Simulation For Wallpaper Engine
 
-- Striped down version of Pavel Dobryakov's OpenGl Fluid Simulation repository made for wallpaper engine use
+Striped down version of Pavel Dobryakov's OpenGl Fluid Simulation repository made for wallpaper engine use
 
-'''dist''' contains the wallpaper engine package
+`dist` folder contains the wallpaper engine package
 
-Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=1834382606
+Also on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=1834382606
 
 ### Features
 - Lightweight
