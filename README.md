@@ -4,6 +4,8 @@
 
 '''dist''' contains the wallpaper engine package
 
+Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=1834382606
+
 ### Features
 - Lightweight
 - Beautiful
